@@ -1,9 +1,6 @@
 package firebaseDemo.firebaseDemo.model;
 
-
-
 import org.springframework.cloud.gcp.data.firestore.Document;
-
 
 import com.google.cloud.firestore.annotation.DocumentId;
 
@@ -14,12 +11,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collectionName = "products")
-public class Product {
-    @DocumentId()
-    private String documentId;
-    private String productName;
-    private int unitPrice;
-    private Category category;
-
+@Document(collectionName = "categories")
+public class Category {
+	
+	@DocumentId
+	String documentId;
+	String categoryName;
+	
 }
